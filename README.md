@@ -57,21 +57,21 @@ j.	Virtualization/emulation
      To make it easy, do not allow interrupts during system calls or vice versa.
 
 ### Instruction set
-    1 = Load value\t		      Load the value into the AC
-    2 = Load addr		        Load the value at the address into the AC
-    3 = LoadInd addr	      Load the value from the address found in the given address into the AC
+    1 = Load value	       Load the value into the AC
+    2 = Load addr		       Load the value at the address into the AC
+    3 = LoadInd addr	       Load the value from the address found in the given address into the AC
                             (for example, if LoadInd 500, and 500 contains 100, then load from 100).
-    4 = LoadIdxX addr	      Load the value at (address+X) into the AC
+    4 = LoadIdxX addr	    Load the value at (address+X) into the AC
                             (for example, if LoadIdxX 500, and X contains 10, then load from 510).
-    5 = LoadIdxY addr	      Load the value at (address+Y) into the AC
-    6 = LoadSpX		          Load from (Sp+X) into the AC (if SP is 990, and X is 1, load from 991).
-    7 = Store addr		      Store the value in the AC into the address
-    8 = Get			            Gets a random int from 1 to 100 into the AC
-    9 = Put port		        If port=1, writes AC as an int to the screen
+    5 = LoadIdxY addr	    Load the value at (address+Y) into the AC
+    6 = LoadSpX		       Load from (Sp+X) into the AC (if SP is 990, and X is 1, load from 991).
+    7 = Store addr		    Store the value in the AC into the address
+    8 = Get			          Gets a random int from 1 to 100 into the AC
+    9 = Put port		       If port=1, writes AC as an int to the screen
                             If port=2, writes AC as a char to the screen
-    10 = AddX		            Add the value in X to the AC
-    11 = AddY		            Add the value in Y to the AC
-    12 = SubX		            Subtract the value in X from the AC
+    10 = AddX		          Add the value in X to the AC
+    11 = AddY		          Add the value in Y to the AC
+    12 = SubX		          Subtract the value in X from the AC
     13 = SubY               Subtract the value in Y from the AC
     14 = CopyToX            Copy the value in the AC to X
     15 = CopyFromX          Copy the value in X to the AC
