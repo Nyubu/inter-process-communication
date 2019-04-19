@@ -58,7 +58,7 @@ Memory
      To make it easy, do not allow interrupts during system calls or vice versa.
 
  Instruction set
-    1 = Load value		      Load the value into the AC
+    1 = Load value\t		      Load the value into the AC
     2 = Load addr		        Load the value at the address into the AC
     3 = LoadInd addr	      Load the value from the address found in the given address into the AC
                             (for example, if LoadInd 500, and 500 contains 100, then load from 100).
