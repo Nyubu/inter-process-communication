@@ -1,12 +1,11 @@
-# inter-process-communication
 
-Project Overview:
+## Project Overview:
 
 The project simulates a simple computer system consisting of a CPU and Memory.
 The CPU and Memory is simulated by separate processes that communicate.
 Memory will contain one program that the CPU will execute and then the simulation will end.
 
-Objectives
+## Objectives
 
 1)	Learn how multiple processes can communicate and cooperate.
 2)	Understand low-level concepts important to an operating system. 
@@ -21,9 +20,9 @@ h.	Memory protection.
 i.	I/O.
 j.	Virtualization/emulation
 
-Problem Details
+## Problem Details
 
-CPU
+### CPU
    It will have these registers:  PC, SP, IR, AC, X, Y.
    It will support the instructions shown on the next page of this document.
    It will run the user program at address 0.
@@ -35,7 +34,7 @@ CPU
    The program ends when the End instruction is executed.  The 2 processes should end at that time.
    The user program cannot access system memory (exits with error message).
    
-Memory
+### Memory
    It will consist of 2000 integer entries, 0-999 for the user program, 1000-1999 for system code.
    It will support two operations:
        read(address) -  returns the value at the address
@@ -43,10 +42,10 @@ Memory
    Memory will initialize itself by reading a program file.
    Note that the memory is simply storage; it has no real logic beyond reading and writing.
  
-   Timer
+   #### Timer
      A timer will interrupt the processor after every X instructions, where X is a command-line parameter.
 
-   Interrupt processing
+   #### Interrupt processing
      There are two forms of interrupts:  the timer and a system call using the int instruction.
      In both cases the CPU should enter kernel mode.
      The stack pointer should be switched to the system stack.
@@ -57,7 +56,7 @@ Memory
      Interrupts should be disabled during interrupt processing to avoid nested execution.
      To make it easy, do not allow interrupts during system calls or vice versa.
 
- Instruction set
+### Instruction set
     1 = Load value\t		      Load the value into the AC
     2 = Load addr		        Load the value at the address into the AC
     3 = LoadInd addr	      Load the value from the address found in the given address into the AC
