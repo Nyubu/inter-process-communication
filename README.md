@@ -12,25 +12,16 @@ Memory contains one program that the CPU will execute and then the simulation wi
 1)	Learn how multiple processes can communicate and cooperate.
 2)	Understand low-level concepts important to an operating system. 
 
-a.	Processor interaction with main memory.
-
-b.	Processor instruction behavior.
-
-c.	Role of registers.
-
-d.	Stack processing.
-
-e.	Procedure calls.	
-
-f.	System calls.
-
-g.	Interrupt handling.
-
-h.	Memory protection.
-
-i.	I/O.
-
-j.	Virtualization/emulation
+         a.	Processor interaction with main memory.
+         b.	Processor instruction behavior.
+         c.	Role of registers.
+         d.	Stack processing.
+         e.	Procedure calls.	
+         f.	System calls.
+         g.	Interrupt handling.
+         h.	Memory protection.
+         i.	I/O.
+         j.	Virtualization/emulation
 
 ## Problem Details
 
