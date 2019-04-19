@@ -79,9 +79,9 @@ j.	Virtualization/emulation
       8 = Get         Gets a random int from 1 to 100 into the AC
       9 = Put port      If port=1, writes AC as an int to the screen
                               If port=2, writes AC as a char to the screen
-      10 = AddX         Add the value in X to the AC
-      11 = AddY         Add the value in Y to the AC
-      12 = SubX         Subtract the value in X from the AC
+      10 = AddX            Add the value in X to the AC
+      11 = AddY            Add the value in Y to the AC
+      12 = SubX            Subtract the value in X from the AC
       13 = SubY               Subtract the value in Y from the AC
       14 = CopyToX            Copy the value in the AC to X
       15 = CopyFromX          Copy the value in X to the AC
