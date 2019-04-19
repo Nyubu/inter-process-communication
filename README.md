@@ -43,18 +43,18 @@ j.	Virtualization/emulation
    Note that the memory is simply storage; it has no real logic beyond reading and writing.
  
    #### Timer
-     A timer will interrupt the processor after every X instructions, where X is a command-line parameter.
+   A timer will interrupt the processor after every X instructions, where X is a command-line parameter.
 
    #### Interrupt processing
-     There are two forms of interrupts:  the timer and a system call using the int instruction.
-     In both cases the CPU should enter kernel mode.
-     The stack pointer should be switched to the system stack.
-     SP and PC registers should be saved on the system stack.  (The handler may save additional registers). 
-     A timer interrupt should cause execution at address 1000.
-     The int instruction should cause execution at address 1500.
-     The iret instruction returns from an interrupt.
-     Interrupts should be disabled during interrupt processing to avoid nested execution.
-     To make it easy, do not allow interrupts during system calls or vice versa.
+  There are two forms of interrupts:  the timer and a system call using the int instruction.
+  In both cases the CPU should enter kernel mode.
+  The stack pointer should be switched to the system stack.
+  SP and PC registers should be saved on the system stack.  (The handler may save additional registers). 
+  A timer interrupt should cause execution at address 1000.
+  The int instruction should cause execution at address 1500.
+  The iret instruction returns from an interrupt.
+  Interrupts should be disabled during interrupt processing to avoid nested execution.
+  To make it easy, do not allow interrupts during system calls or vice versa.
 
 ### Instruction set
     1 = Load value	       Load the value into the AC
