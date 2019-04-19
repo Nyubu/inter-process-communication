@@ -1,9 +1,11 @@
+#inter-process-communication
+The project simulates a simple computer system consisting of a CPU and Memory.
 
 ## Project Overview:
 
 The project simulates a simple computer system consisting of a CPU and Memory.
 The CPU and Memory is simulated by separate processes that communicate.
-Memory will contain one program that the CPU will execute and then the simulation will end.
+Memory contains one program that the CPU will execute and then the simulation will end.
 
 ## Objectives
 
@@ -32,9 +34,9 @@ j.	Virtualization/emulation
 ## Problem Details
 
 ### CPU
-   It will have these registers:  PC, SP, IR, AC, X, Y.
-   It will support the instructions shown on the next page of this document.
-   It will run the user program at address 0.
+   It contains these registers:  PC, SP, IR, AC, X, Y.
+   It supports the instructions shown at the bottom of this document
+   It runs the user program at address 0.
    Instructions are fetched into the IR from memory.  The operand can be fetched into a local variable.
    Each instruction should be executed before the next instruction is fetched.
    The user stack resides at the end of user memory and grows down toward address 0.
@@ -44,26 +46,26 @@ j.	Virtualization/emulation
    The user program cannot access system memory (exits with error message).
    
 ### Memory
-   It will consist of 2000 integer entries, 0-999 for the user program, 1000-1999 for system code.
-   It will support two operations:
+   It consists of 2000 integer entries, 0-999 for the user program, 1000-1999 for system code.
+   It supports two operations:
        read(address) -  returns the value at the address
        write(address, data) - writes the data to the address
    Memory will initialize itself by reading a program file.
-   Note that the memory is simply storage; it has no real logic beyond reading and writing.
+   Memory is simply storage that has no real logic beyond reading and writing.
  
    #### Timer
-   A timer will interrupt the processor after every X instructions, where X is a command-line parameter.
+   A timer interrupts the processor after every X instructions, where X is a command-line parameter.
 
    #### Interrupt processing
   There are two forms of interrupts:  the timer and a system call using the int instruction.
-  In both cases the CPU should enter kernel mode.
-  The stack pointer should be switched to the system stack.
-  SP and PC registers should be saved on the system stack.  (The handler may save additional registers). 
-  A timer interrupt should cause execution at address 1000.
+  In both cases, the CPU enters kernel mode.
+  The stack pointer is switched to the system stack.
+  SP and PC registers is saved on the system stack.  (The handler may save additional registers). 
+  A timer interrupt causes execution at address 1000.
   The int instruction should cause execution at address 1500.
   The iret instruction returns from an interrupt.
-  Interrupts should be disabled during interrupt processing to avoid nested execution.
-  To make it easy, do not allow interrupts during system calls or vice versa.
+  Interrupts are disabled during interrupt processing to avoid nested execution.
+  Interrupts are not allowed during system calls or vice versa.
 
 ### Instruction set
    
